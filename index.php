@@ -10,15 +10,9 @@
     <?php 
        require_once "db.php";
        require_once "crud.php";
-       
-       // Database connection
        $database = new Database();
        $db = $database->getConnection();
-       
-       // CRUD instance
        $crud = new CRUD($db, "users");
-       
-       // Fetch all users
        $users = $crud->read();
     ?>
     <div class="container">

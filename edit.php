@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $conditions = ['id' => $userId];
 
     if ($crud->update($updateData, $conditions)) {
-        // Redirect to the listing page with a success message
         header("Location: index.php?message=User updated successfully");
         exit;
     } else {
